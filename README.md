@@ -45,7 +45,7 @@ from the command line to inspect error output in the terimainal, I use the follo
             --group-add $(getent group video | cut -d: -f3) \
             -d \
             --name=nightingale \
-            nightingale \
+            docker.io/m27315/nightingale:latest \
         ))'
     $ music
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONTAINER_NAME=nightingale
-IMAGE_NAME=nightingale
+IMAGE_NAME=docker.io/m27315/nightingale:latest
 BIN_NAME=nightingale
 
 if [ "$(docker inspect -f '{{.State.Running}}' ${CONTAINER_NAME} 2>/dev/null)" != "true" ]
@@ -18,4 +18,3 @@ then
 else
     docker exec "${CONTAINER_NAME}" "${BIN_NAME}" "$@"
 fi
-
